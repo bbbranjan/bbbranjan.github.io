@@ -271,7 +271,7 @@ p: actual-style {
   overflow: hidden;
 }
 .skillset .level-title {
-  font-size: 14px;
+  font-size: 17px;
   margin-top: 0;
   margin-bottom: 12px;
 }
@@ -325,7 +325,7 @@ p: actual-style {
   .skillset .level-title {
     display: inline-block;
     float: left;
-    width: 30%;
+    width: 25%;
     margin-bottom: 0;
   }
   .skillset .level-bar {
