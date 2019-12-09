@@ -109,11 +109,33 @@
             </section><!--//section-->
             
             <section class="section experiences-section">
-                <h2 class="section-title"><i class="fa fa-briefcase"></i>Publications</h2>
+                <h2 class="section-title"><i class="fa fa-briefcase"></i>Presentations &amp; Publications</h2>
+                
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
-                            <h3 class="job-title">Composite Mathematical Modeling of Calcium Signaling behind Neuronal Cell Death in Alzheimer's Disease</h3>
+                            <h3 class="job-title"><a href="https://github.com/bbbranjan/scConsensus", target="_blank">scConsensus: An approach combining semi-supervised and unsupervised clustering for cell type annotation in single-cell RNA-seq data </a></h3>
+                            <div class="time">November 2019</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Single Cell Analyses, Cold Spring Harbor Laboratory</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>
+                            Although cell type annotation is a crucial step in scRNA-seq data analysis, the single-cell community has yet to agree upon a single methodology. Semi-supervised clustering methods like RCA[1] and SingleR[2] robustly detect major cell types by correlating reference bulk transcriptomic datasets of sorted cell types with single-cell data. However, these methods are limited by the resolution of their reference data sets and cannot annotate intermediate cell states and case-specific phenotypes. De-novo clustering methods, implemented in packages like Seurat[3] and Scanpy[4], overcome these limitations. Despite these advantages, they are more susceptible to batch and quality variation, occasionally producing heterogeneous cell clusters.
+                        </p>
+                        <p>
+                            We utilise the merits and account for the demerits of both methodologies in scConsensus, a hybrid approach to obtain cell type annotation using a consensus of semi-supervised and unsupervised clustering. scConsensus uses the reference-based RCA to identify known cell types, simultaneously implementing de-novo clustering using Seurat on the same dataset. Both clustering results are then manually annotated using the strongest correlated reference cell type for RCA and marker gene expression for Seurat. In RCA, clusters that do not correlate with a unique reference, are case-specific or are expected to be subtypes of a reference cell type are annotated using differential expression of marker genes of their corresponding Seurat clusters. Conversely, heterogeneous Seurat clusters are reassigned using their best correlating RCA reference cell types. A consensus cluster annotation is thus obtained, where a unique cell type is assigned to each cell. scConsensus then looks for differentially expressed (DE) genes between every pair of cell types, and uses the union set of DE genes to cluster the cells using hierarchical clustering.
+                        </p>
+                        <p>
+                            We evaluated the performance of scConsensus on 12 scRNA-seq (UMI and SmartSeq2) datasets. We show that scConsensus consistently outputs more homogeneous clusters compared to Seurat or RCA. Furthermore, we used 6 CITE-seq datasets to show that scConsensus’ results correlate better with antibody-based cell type annotations. Thus, we conclude that scConsensus is a robust methodology to detect known cell types and characterise new cell types in scRNA-seq data.
+                        </p>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title"><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/s12918-018-0529-2", target="_blank">Composite Mathematical Modeling of Calcium Signaling behind Neuronal Cell Death in Alzheimer's Disease</a></h3>
                             <div class="time">April 2018</div>
                         </div><!--//upper-row-->
                         <div class="company">BMC Systems Biology - Volume 12 (The Sixteenth Asia-Pacific Bioinformatics Conference)</div>
@@ -130,32 +152,34 @@
             
             <section class="section experiences-section">
                 <h2 class="section-title"><i class="fa fa-briefcase"></i>Experience</h2>
+<!--
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
                             <h3 class="job-title">Co-founder and CTO</h3>
                             <div class="time">January 2019 - Present</div>
-                        </div><!--//upper-row-->
+                        </div>
                         <div class="company">PGMed</div>
-                    </div><!--//meta-->
+                    </div>
                     <div class="details">
                         PGMed is an online application that provides home-based post-graduate medical examination training in India
                         <ul>
                             <li>Worked with external vendors to design, develop and test web application    </li>
                         </ul>  
-                    </div><!--//details-->
-                </div><!--//item-->
+                    </div>
+                </div>
+-->
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
                             <h3 class="job-title">Bioinformatics Specialist</h3>
                             <div class="time">August 2018 - Present</div>
                         </div><!--//upper-row-->
-                        <div class="company">Shyam Prabhakar's Lab <br>Genome Institute of Singapore</div>
+                        <div class="company">Prabhakar Lab, Genome Institute of Singapore</div>
                     </div><!--//meta-->
                     <div class="details">
                         <ul>
-                            <li>Working on identifying cell type populations in single-cell RNA-sequencing data</li>
+                            <li>Developing algorithms for cell type identification in single-cell data</li>
                         </ul>  
                     </div><!--//details-->
                 </div><!--//item-->
