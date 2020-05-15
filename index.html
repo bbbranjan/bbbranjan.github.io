@@ -43,7 +43,7 @@
     <div class="wrapper">
         <div class="sidebar-wrapper">
             <div class="profile-container">
-                <img class="profile" src="assets/images/bobby-yokohama-final.png" alt="" />
+                <img class="profile img-circle" src="assets/images/bobby-cake.png" alt="" />
                 <h1 class="name">Bobby Ranjan</h1>
                 <h3 class="tagline">Student | Researcher | Nerd</h3>
             </div><!--//profile-container-->
@@ -114,11 +114,11 @@
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
-                            <h3 class="job-title" style="width: 80%"><a href="", target="_blank">Epithelial and microenvironmental states determine the immune landscape of colorectal cancer</a></h3>
+                            <h3 class="job-title" style="width: 80%"><a href="", target="_blank">Lineage-dependent gene expression programs influence the immune landscape of colorectal cancer</a></h3>
                             <div class="time">In Press</div>
                         </div><!--//upper-row-->
                         <div class="authors">Hae-Ock Lee, Yourae Hong, Dr. Hakki Etlioglu, Yong Beom Cho, ..., Bobby Ranjan, ..., Shyam Prabhakar, Sabine Tejpar, Woong-Yang Park</div>
-                        <div class="company">Nature Genetics (2020)</div>
+                        <div class="company">Nature Genetics (In Press)</div>
                     </div><!--//meta-->
                     <div class="details">
                         
@@ -128,21 +128,35 @@
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
-                            <h3 class="job-title" style="width: 80%"><a href="https://github.com/bbbranjan/scConsensus", target="_blank">scConsensus: An approach combining semi-supervised and unsupervised clustering for cell type annotation in single-cell RNA-seq data </a></h3>
+                            <h3 class="job-title" style="width: 80%"><a href="https://www.biorxiv.org/content/10.1101/2020.04.22.056473v1", target="_blank">scConsensus: An approach combining semi-supervised and unsupervised clustering for cell type annotation in single-cell RNA-seq data </a></h3>
                             <div class="authors">Bobby Ranjan, Florian Schmidt, Wenjie Sun, Jinyu Park, Mohammad Amin Honardoost, Joanna Tan, Nirmala Arul Rayan and Shyam Prabhakar</div>
-                            <div class="time">November 2019</div>
+                            <div class="time">April 2020</div>
                         </div><!--//upper-row-->
-                        <div class="company">Single Cell Analyses, Cold Spring Harbor Laboratory</div>
+                        <div class="company">bioRXiv (Single Cell Analyses Meeting, Cold Spring Harbor Laboratory)</div>
                     </div><!--//meta-->
                     <div class="details">
                         <p>
-                            Although cell type annotation is a crucial step in scRNA-seq data analysis, the single-cell community has yet to agree upon a single methodology. Semi-supervised clustering methods like RCA[1] and SingleR[2] robustly detect major cell types by correlating reference bulk transcriptomic datasets of sorted cell types with single-cell data. However, these methods are limited by the resolution of their reference data sets and cannot annotate intermediate cell states and case-specific phenotypes. De-novo clustering methods, implemented in packages like Seurat[3] and Scanpy[4], overcome these limitations. Despite these advantages, they are more susceptible to batch and quality variation, occasionally producing heterogeneous cell clusters.
+                            <b>Background:</b> Clustering is a crucial step in the analysis of single-cell data. Clusters identified in an unsupervised manner are typically annotated to cell types based on differentially expressed genes. In contrast, supervised methods use a reference panel of labelled transcriptomes to guide both clustering and cell type identification. Supervised and unsupervised clustering approaches have their distinct advantages and limitations. Therefore, they can lead to different but often complementary clustering results. Hence, a consensus approach leveraging the merits of both clustering paradigms could result in a more accurate clustering and a more precise cell type annotation. <br />
+                        
+                            <b>Results:</b> We present scConsensus, an R framework for generating a consensus clustering by (i) integrating the results from both unsupervised and supervised approaches and (ii) refining the consensus clusters using differentially expressed (DE) genes. The value of our approach is demonstrated on several existing single-cell RNA sequencing datasets, including data from sorted PBMC sub-populations.<br />
+                        
+                            <b>Conclusions:</b> scConsensus combines the merits of unsupervised and supervised approaches to partition cells with better cluster separation and homogeneity, thereby increasing our confidence in detecting distinct cell types. scConsensus is freely available on <a href="https://github.com/prabhakarlab/scConsensus">GitHub</a>.
                         </p>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title"><a href="http://hdl.handle.net/10356/73997", target="_blank">Detection of functional and topological modules in protein interaction networks</a></h3>
+                            <div class="time">May 2018</div>
+                        </div><!--//upper-row-->
+                        <div class="authors">Bobby Ranjan</div>
+                        <div class="company">Final Year Project, Nanyang Technological University</div>
+                    </div><!--//meta-->
+                    <div class="details">
                         <p>
-                            We utilise the merits and account for the demerits of both methodologies in scConsensus, a hybrid approach to obtain cell type annotation using a consensus of semi-supervised and unsupervised clustering. scConsensus uses the reference-based RCA to identify known cell types, simultaneously implementing de-novo clustering using Seurat on the same dataset. Both clustering results are then manually annotated using the strongest correlated reference cell type for RCA and marker gene expression for Seurat. In RCA, clusters that do not correlate with a unique reference, are case-specific or are expected to be subtypes of a reference cell type are annotated using differential expression of marker genes of their corresponding Seurat clusters. Conversely, heterogeneous Seurat clusters are reassigned using their best correlating RCA reference cell types. A consensus cluster annotation is thus obtained, where a unique cell type is assigned to each cell. scConsensus then looks for differentially expressed (DE) genes between every pair of cell types, and uses the union set of DE genes to cluster the cells using hierarchical clustering.
-                        </p>
-                        <p>
-                            We evaluated the performance of scConsensus on 12 scRNA-seq (UMI and SmartSeq2) datasets. We show that scConsensus consistently outputs more homogeneous clusters compared to Seurat or RCA. Furthermore, we used 6 CITE-seq datasets to show that scConsensus’ results correlate better with antibody-based cell type annotations. Thus, we conclude that scConsensus is a robust methodology to detect known cell types and characterise new cell types in scRNA-seq data.
+                            Mapping the complete set of protein and gene interactions in the human cell has been a goal of the biological community for nearly two decades, since the first human genome was sequenced. To this end, computational approaches have been studied in depth to allow functional annotation of protein interactions. In this project, we explored the potential of using four common module detection algorithms - stochastic block model, Louvain method, modified Louvain (incremental Louvain) method and link community - in order to detect functional modules of for protein interaction networks. We implemented these algorithms in a Cytoscape application for users to run on their respective networks. Using this application, we conducted a comparative study of the algorithms to understand their applicability in protein function annotation and determine how close topological modules of protein-interaction networks are to their functional modules.
                         </p>
                     </div><!--//details-->
                 </div><!--//item-->
@@ -255,9 +269,6 @@
                 <h2 class="section-title"><i class="fa fa-wrench"></i>Projects</h2>
                 <div class="intro">
                 </div><!--//intro-->
-                <div class="item">
-                    <span class="project-title"><a>Protein Interaction Networks</a></span> - <span class="project-tagline">A research project to modularise protein networks based on functionality using numerous module-detection algorithms.</span>
-                </div><!--//item-->
                 <div class="item">
                     <span class="project-title"><a href="https://github.com/SuyashLakhotia/ContextNewsBot/">ContextNewsBot</a></span> - <span class="project-tagline">Context News Bot is a Chrome extension that allows you to step out of your filter bubble by providing a diverse set of news articles and objective Wikipedia entries for any tweet on your Twitter timeline.</span>
                 </div><!--//item-->
