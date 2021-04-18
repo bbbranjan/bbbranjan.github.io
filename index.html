@@ -93,16 +93,31 @@
             
             <section class="section education-section">
                 <h2 class="section-title"><i class="fa fa-university"></i>Education</h2>
+                
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
-                            <h3 class="degree">Bachelor of Engineering (B.E.) in Computer Engineering with <br>Minors in Entrepreneurship &amp; Life Sciences</h3>
-                            <div class="time">2014 - 2018</div>
+                            <h3 class="degree">Incoming Predoctoral Fellow, Hackett Lab</h3>
+                            <div class="time">2021 - </div>
                         </div><!--//upper-row-->
                     </div><!--//meta-->
                     <div class="details">
                         <h4></h4>
                     </div><!--//details-->
+                    <div class="university">European Molecular Biology Laboratory, Rome</div>
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="degree">Bachelor of Engineering (B.E.) in Computer Engineering </h3>
+                            <div class="time">2014 - 2018</div>
+                        </div><!--//upper-row-->
+                    </div><!--//meta-->
+                    <div class="degree-minor">
+                        Minor in Entrepreneurship <br> 
+                        Minor in Life Sciences
+                    </div><!--//degree-minor-->
                     <div class="university">Nanyang Technological University, Singapore</div>
                 </div><!--//item-->
             </section><!--//section-->
@@ -111,7 +126,8 @@
                 <h2 class="section-title"><i class="fa fa-book"></i>Selected Publications</h2>
 
                 <div class="item">
-                    <div class="meta">
+                    <button type="button" class="collapsible">
+                        <div class="meta">
                         <div class="upper-row">
                             <h3 class="job-title" style="width: 80%"><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04028-4", target="_blank">scConsensus: combining supervised and unsupervised clustering for cell type annotation in single-cell RNA-seq data </a></h3>
                             <div class="authors">Bobby Ranjan*, Florian Schmidt*, Wenjie Sun, Jinyu Park, Mohammad Amin Honardoost, Joanna Tan, Nirmala Arul Rayan and Shyam Prabhakar</div>
@@ -119,7 +135,10 @@
                         </div><!--//upper-row-->
                         <div class="company">BMC Bioinformatics</div>
                     </div><!--//meta-->
-                    <div class="details">
+                    </button>
+                    <div class="details content">
+                        
+                        <h4>Abstract</h4>
                         <p>
                             <b>Background:</b> Clustering is a crucial step in the analysis of single-cell data. Clusters identified in an unsupervised manner are typically annotated to cell types based on differentially expressed genes. In contrast, supervised methods use a reference panel of labelled transcriptomes to guide both clustering and cell type identification. Supervised and unsupervised clustering approaches have their distinct advantages and limitations. Therefore, they can lead to different but often complementary clustering results. Hence, a consensus approach leveraging the merits of both clustering paradigms could result in a more accurate clustering and a more precise cell type annotation. <br />
                         
@@ -131,15 +150,20 @@
                 </div><!--//item-->
                 
                 <div class="item">
-                    <div class="meta">
+                    
+                    <button type="button" class="collapsible"> <div class="meta">
+                        
                         <div class="upper-row">
                             <h3 class="job-title" style="width: 80%"><a href="https://www.biorxiv.org/content/10.1101/2020.10.07.330563v3", target="_blank">DUBStepR: correlation-based feature selection for clustering single-cell RNA sequencing data </a></h3>
                             <div class="authors">Bobby Ranjan, Wenjie Sun, Jinyu Park, Kunal Mishra, Ronald Xie, Fatemeh Alipour, Vipul Singhal, Florian Schmidt, Ignasius Joanito, Nirmala Arul Rayan, Michelle Gek Liang Lim, Shyam Prabhakar</div>
                             <div class="time">March 2021</div>
                         </div><!--//upper-row-->
                         <div class="company">BioRxiv (Under revision at <i>Nature Communications</i>)</div>
-                    </div><!--//meta-->
-                    <div class="details">
+                    </div><!--//meta--> </button> 
+                    
+                    <div class="details content">
+                        
+                        <h4>Abstract</h4>
                         <p>
                             Feature selection (marker gene selection) is widely believed to improve clustering accuracy, and is thus a key component of single cell clustering pipelines. However, we found that the performance of existing feature selection methods was inconsistent across benchmark datasets, and occasionally even worse than without feature selection. Moreover, existing methods ignored information contained in gene-gene correlations. We therefore developed DUBStepR (Determining the Underlying Basis using Stepwise Regression), a feature selection algorithm that leverages gene-gene correlations with a novel measure of inhomogeneity in feature space, termed the Density Index (DI). Despite selecting a relatively small number of genes, DUBStepR substantially outperformed existing single-cell feature selection methods across diverse clustering benchmarks. In a published scRNA-seq dataset from sorted monocytes, DUBStepR sensitively detected a rare and previously invisible population of contaminating basophils. DUBStepR is scalable to over a million cells, and can be straightforwardly applied to other data types such as single-cell ATAC-seq. We propose DUBStepR as a general-purpose feature selection solution for accurately clustering single-cell data.
                         </p>
@@ -147,7 +171,8 @@
                 </div><!--//item-->
                 
                 <div class="item">
-                    <div class="meta">
+                    <button type="button" class="collapsible">
+                        <div class="meta">
                         <div class="upper-row">
                             <h3 class="job-title" style="width: 80%"><a href="https://www.biorxiv.org/content/10.1101/2021.02.16.431527v1", target="_blank">Robust clustering and interpretation of scRNA-seq data using reference component analysis </a></h3>
                             <div class="authors"> Florian Schmidt*, Bobby Ranjan*, Quy Xiao Xuan Lin, Vaidehi Krishnan, Ignasius Joanito, Mohammad Amin Honardoost, Zahid Nawaz, Prasanna Nori Venkatesh, Joanna Tan, Nirmala Arul Rayan, S.Tiong Ong, Shyam Prabhakar</div>
@@ -155,7 +180,11 @@
                         </div><!--//upper-row-->
                         <div class="company">BioRxiv (Under revision at <i>Nucleic Acids Research</i>)</div>
                     </div><!--//meta-->
-                    <div class="details">
+                    </button>
+                    <div class="details content">
+                        
+                        <h4>Abstract</h4>
+                        
                         <p>
                             <b>Motivation:</b> The transcriptomic diversity of the hundreds of cell types in the human body can be analysed in unprecedented detail using single cell (SC) technologies. Though clustering of cellular transcriptomes is the default technique for defining cell types and subtypes, single cell clustering can be strongly influenced by technical variation. In fact, the prevalent unsupervised clustering algorithms can cluster cells by technical, rather than biological, variation. <br />
                         
@@ -167,7 +196,8 @@
                 </div><!--//item-->
                 
                 <div class="item">
-                    <div class="meta">
+                    <button type="button" class="collapsible">
+                        <div class="meta">
                         <div class="upper-row">
                             <h3 class="job-title" style="width: 80%"><a href="https://www.nature.com/articles/s41588-020-0636-z", target="_blank">Lineage-dependent gene expression programs influence the immune landscape of colorectal cancer</a></h3>
                             <div class="time">May 2020</div>
@@ -175,31 +205,41 @@
                         <div class="authors">Hae-Ock Lee, Yourae Hong, Dr. Hakki Etlioglu, Yong Beom Cho, ..., Bobby Ranjan, ..., Shyam Prabhakar, Sabine Tejpar, Woong-Yang Park</div>
                         <div class="company">Nature Genetics</div>
                     </div><!--//meta-->
-                    <div class="details">
+                    </button>
+                    <div class="details content">
+                        
+                        <h4>Abstract</h4>
                         <p>
                         Immunotherapy for metastatic colorectal cancer is effective only for mismatch repair-deficient tumors with high microsatellite instability that demonstrate immune infiltration, suggesting that tumor cells can determine their immune microenvironment. To understand this cross-talk, we analyzed the transcriptome of 91,103 unsorted single cells from 23 Korean and 6 Belgian patients. Cancer cells displayed transcriptional features reminiscent of normal differentiation programs, and genetic alterations that apparently fostered immunosuppressive microenvironments directed by regulatory T cells, myofibroblasts and myeloid cells. Intercellular network reconstruction supported the association between cancer cell signatures and specific stromal or immune cell populations. Our collective view of the cellular landscape and intercellular interactions in colorectal cancer provide mechanistic information for the design of efficient immuno-oncology treatment strategies.
                         </p>
                     </div><!--//details-->
                 </div><!--//item-->
                 
+<!--
                 <div class="item">
-                    <div class="meta">
+                    <button type="button" class="collapsible">
+                        <div class="meta">
                         <div class="upper-row">
                             <h3 class="job-title"><a href="http://hdl.handle.net/10356/73997", target="_blank">Detection of functional and topological modules in protein interaction networks</a></h3>
                             <div class="time">May 2018</div>
-                        </div><!--//upper-row-->
+                        </div>
                         <div class="authors">Bobby Ranjan</div>
                         <div class="company">Final Year Project, Nanyang Technological University</div>
-                    </div><!--//meta-->
-                    <div class="details">
+                    </div>
+                    </button>
+                    <div class="details content">
+                        
+                        <h4>Abstract</h4>
                         <p>
                             Mapping the complete set of protein and gene interactions in the human cell has been a goal of the biological community for nearly two decades, since the first human genome was sequenced. To this end, computational approaches have been studied in depth to allow functional annotation of protein interactions. In this project, we explored the potential of using four common module detection algorithms - stochastic block model, Louvain method, modified Louvain (incremental Louvain) method and link community - in order to detect functional modules of for protein interaction networks. We implemented these algorithms in a Cytoscape application for users to run on their respective networks. Using this application, we conducted a comparative study of the algorithms to understand their applicability in protein function annotation and determine how close topological modules of protein-interaction networks are to their functional modules.
                         </p>
-                    </div><!--//details-->
-                </div><!--//item-->
+                    </div>
+                </div>
+-->
                 
                 <div class="item">
-                    <div class="meta">
+                    <button type="button" class="collapsible"> 
+                        <div class="meta">
                         <div class="upper-row">
                             <h3 class="job-title"><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/s12918-018-0529-2", target="_blank">Composite Mathematical Modeling of Calcium Signaling behind Neuronal Cell Death in Alzheimer's Disease</a></h3>
                             <div class="time">April 2018</div>
@@ -207,7 +247,10 @@
                         <div class="authors">Bobby Ranjan, Ket Hing Chong and Zheng Jie</div>
                         <div class="company">BMC Systems Biology - Volume 12 (The Sixteenth Asia-Pacific Bioinformatics Conference)</div>
                     </div><!--//meta-->
-                    <div class="details">
+                    </button>
+                    <div class="details content">
+                        
+                        <h4>Abstract</h4>
                         <p>
                             <b>Background:</b> Alzheimer's disease (AD) is a progressive neurological disorder, recognized as the most common cause of dementia affecting people aged 65 and above. AD is characterized by an increase in amyloid metabolism, and by the misfolding and deposition of β-amyloid oligomers in and around neurons in the brain. These processes remodel the calcium signaling mechanism in neurons, leading to cell death via apoptosis. Despite accumulating knowledge about the biological processes underlying AD, mathematical models to date are restricted to depicting only a small portion of the pathology. <br />
                             <b>Results: </b> Here, we integrated multiple mathematical models to analyze and understand the relationship among amyloid depositions, calcium signaling and mitochondrial permeability transition pore(PTP)-related cell apoptosis in AD. The model was used to simulate calcium dynamics in the absence and presence of AD. In the absence of AD, i.e. without β-amyloid deposition, mitochondrial and cytosolic calcium level remains in the low resting concentration. However, our in silico simulation of the presence of AD with the β-amyloid deposition, shows an increase in the entry of calcium ions into the cell and dysregulation of Ca<sup>2+</sup> channel receptors on the Endoplasmic Reticulum. This composite model enabled us to make simulation that is not possible to measure experimentally. <br />
@@ -218,7 +261,7 @@
             </section>
             
             <section class="section experiences-section">
-                <h2 class="section-title"><i class="fa fa-industry"></i>Experience</h2>
+                <h2 class="section-title"><i class="fa fa-briefcase"></i>Experience</h2>
 <!--
                 <div class="item">
                     <div class="meta">
@@ -306,7 +349,7 @@
             </section>
             
             <section class="section projects-section">
-                <h2 class="section-title"><i class="fa fa-suitcase"></i>Conferences &amp; Workshops</h2>
+                <h2 class="section-title"><i class="fa fa-coffee"></i>Conferences &amp; Workshops</h2>
                 <div class="intro">
                 </div><!--//intro-->
                 <div class="item">
@@ -314,7 +357,7 @@
                     <li>Human Cell Atlas Asia 2020 - Virtual</li>
                      <li>Intelligent Systems in Molecular Biology 2020 - Virtual</li>
                      <li>Cell Symposia 2019 - Singapore</li>
-                     <li>Single Cell Analyses Meeting - Cold Spring Harbor Laboratory, New York, USA</li>
+                     <li>Single Cell Analyses Meeting 2019 - Cold Spring Harbor Laboratory, New York, USA</li>
                     </ul>   
                 </div><!--//item-->
             </section><!--//section-->
@@ -371,6 +414,24 @@
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
+    
+    <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+    
 </body>
 </html> 
 

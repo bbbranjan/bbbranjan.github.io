@@ -222,7 +222,7 @@ p: actual-style {
 }
 .main-wrapper .university {
   margin-bottom: 10px;
-  color: #97AAC3;
+  color: #7D95B5;
   font-size: 18px;
   font-weight: 500;
 }
@@ -250,7 +250,7 @@ p: actual-style {
 }
 .main-wrapper .company {
   margin-bottom: 10px;
-  color: #97AAC3;
+  color: #7D95B5;
   font-size: 18px;
   font-weight: 500;
 }
@@ -364,6 +364,45 @@ p: actual-style {
 .cssanimations .cd-timeline-img.bounce-in {
   visibility: visible;
   animation: cd-bounce-1 0.6s;
+}
+
+.collapsible {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 1px solid transparent;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  border: 1px solid #000;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-top: 0px solid #000;
 }
  
 @keyframes cd-bounce-1 {
