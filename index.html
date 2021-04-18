@@ -43,7 +43,7 @@
     <div class="wrapper">
         <div class="sidebar-wrapper">
             <div class="profile-container">
-                <img class="profile img-circle" src="assets/images/bobby-cake.png" alt="" />
+                <img class="profile img-circle" src="assets/images/Me_Edited.png" alt="" style="width: 150px;height: 150px" />
                 <h1 class="name">Bobby Ranjan</h1>
                 <h3 class="tagline">Student | Researcher | Nerd</h3>
             </div><!--//profile-container-->
@@ -51,10 +51,9 @@
             <div class="contact-container container-block">
                 <ul class="list-unstyled contact-list">
                     <li class="email"><i class="fa fa-envelope"></i><a href="mailto: bbbranjan@gmail.com">bbbranjan@gmail.com</a></li>
-                    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="http://linkedin.com/in/bobbyranjan" target="_blank">/in/bobbyranjan</a></li>
-                    <li class="research-gate"><i class="ai ai-researchgate"></i> <a href="https://www.researchgate.net/profile/bobby_ranjan" target="_blank">bobby_ranjan</a></li>
-                    <li class="github"><i class="fa fa-github"></i><a href="https://github.com/bbbranjan" target="_blank">bbbranjan</a></li>
                     <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/bbbranjan" target="_blank">bbbranjan</a></li>
+                    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="http://linkedin.com/in/bobbyranjan" target="_blank">/in/bobbyranjan</a></li>
+                    <li class="github"><i class="fa fa-github"></i><a href="https://github.com/bbbranjan" target="_blank">bbbranjan</a></li>
                     <li class="location"><i class="fa fa-map-marker"></i><a href="https://www.google.com.sg/maps/place/Singapore" target="_blank">Singapore</a></li>
                 </ul>
             </div><!--//contact-container-->
@@ -72,8 +71,8 @@
                 <ul class="list-unstyled interests-list">
                     <li>Science &amp; Technology</li>
                     <li>Entrepreneurship</li>
-                    <li>Football (Yes, Soccer)</li>
-                    <li>Singing</li>
+                    <li>Football</li>
+                    <li>Music</li>
                 </ul>
             </div><!--//interests-->
             
@@ -93,7 +92,7 @@
             
             
             <section class="section education-section">
-                <h2 class="section-title"><i class="fa fa-book"></i>Education</h2>
+                <h2 class="section-title"><i class="fa fa-university"></i>Education</h2>
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
@@ -109,8 +108,64 @@
             </section><!--//section-->
             
             <section class="section experiences-section">
-                <h2 class="section-title"><i class="fa fa-briefcase"></i>Selected Publications</h2>
+                <h2 class="section-title"><i class="fa fa-book"></i>Selected Publications</h2>
 
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title" style="width: 80%"><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04028-4", target="_blank">scConsensus: combining supervised and unsupervised clustering for cell type annotation in single-cell RNA-seq data </a></h3>
+                            <div class="authors">Bobby Ranjan*, Florian Schmidt*, Wenjie Sun, Jinyu Park, Mohammad Amin Honardoost, Joanna Tan, Nirmala Arul Rayan and Shyam Prabhakar</div>
+                            <div class="time">April 2021</div>
+                        </div><!--//upper-row-->
+                        <div class="company">BMC Bioinformatics</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>
+                            <b>Background:</b> Clustering is a crucial step in the analysis of single-cell data. Clusters identified in an unsupervised manner are typically annotated to cell types based on differentially expressed genes. In contrast, supervised methods use a reference panel of labelled transcriptomes to guide both clustering and cell type identification. Supervised and unsupervised clustering approaches have their distinct advantages and limitations. Therefore, they can lead to different but often complementary clustering results. Hence, a consensus approach leveraging the merits of both clustering paradigms could result in a more accurate clustering and a more precise cell type annotation. <br />
+                        
+                            <b>Results:</b> We present scConsensus, an R framework for generating a consensus clustering by (i) integrating the results from both unsupervised and supervised approaches and (ii) refining the consensus clusters using differentially expressed (DE) genes. The value of our approach is demonstrated on several existing single-cell RNA sequencing datasets, including data from sorted PBMC sub-populations.<br />
+                        
+                            <b>Conclusions:</b> scConsensus combines the merits of unsupervised and supervised approaches to partition cells with better cluster separation and homogeneity, thereby increasing our confidence in detecting distinct cell types. scConsensus is freely available on <a href="https://github.com/prabhakarlab/scConsensus">GitHub</a>.
+                        </p>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title" style="width: 80%"><a href="https://www.biorxiv.org/content/10.1101/2020.10.07.330563v3", target="_blank">DUBStepR: correlation-based feature selection for clustering single-cell RNA sequencing data </a></h3>
+                            <div class="authors">Bobby Ranjan, Wenjie Sun, Jinyu Park, Kunal Mishra, Ronald Xie, Fatemeh Alipour, Vipul Singhal, Florian Schmidt, Ignasius Joanito, Nirmala Arul Rayan, Michelle Gek Liang Lim, Shyam Prabhakar</div>
+                            <div class="time">March 2021</div>
+                        </div><!--//upper-row-->
+                        <div class="company">BioRxiv (Under revision at <i>Nature Communications</i>)</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>
+                            Feature selection (marker gene selection) is widely believed to improve clustering accuracy, and is thus a key component of single cell clustering pipelines. However, we found that the performance of existing feature selection methods was inconsistent across benchmark datasets, and occasionally even worse than without feature selection. Moreover, existing methods ignored information contained in gene-gene correlations. We therefore developed DUBStepR (Determining the Underlying Basis using Stepwise Regression), a feature selection algorithm that leverages gene-gene correlations with a novel measure of inhomogeneity in feature space, termed the Density Index (DI). Despite selecting a relatively small number of genes, DUBStepR substantially outperformed existing single-cell feature selection methods across diverse clustering benchmarks. In a published scRNA-seq dataset from sorted monocytes, DUBStepR sensitively detected a rare and previously invisible population of contaminating basophils. DUBStepR is scalable to over a million cells, and can be straightforwardly applied to other data types such as single-cell ATAC-seq. We propose DUBStepR as a general-purpose feature selection solution for accurately clustering single-cell data.
+                        </p>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title" style="width: 80%"><a href="https://www.biorxiv.org/content/10.1101/2021.02.16.431527v1", target="_blank">Robust clustering and interpretation of scRNA-seq data using reference component analysis </a></h3>
+                            <div class="authors"> Florian Schmidt*, Bobby Ranjan*, Quy Xiao Xuan Lin, Vaidehi Krishnan, Ignasius Joanito, Mohammad Amin Honardoost, Zahid Nawaz, Prasanna Nori Venkatesh, Joanna Tan, Nirmala Arul Rayan, S.Tiong Ong, Shyam Prabhakar</div>
+                            <div class="time">February 2021</div>
+                        </div><!--//upper-row-->
+                        <div class="company">BioRxiv (Under revision at <i>Nucleic Acids Research</i>)</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>
+                            <b>Motivation:</b> The transcriptomic diversity of the hundreds of cell types in the human body can be analysed in unprecedented detail using single cell (SC) technologies. Though clustering of cellular transcriptomes is the default technique for defining cell types and subtypes, single cell clustering can be strongly influenced by technical variation. In fact, the prevalent unsupervised clustering algorithms can cluster cells by technical, rather than biological, variation. <br />
+                        
+                            <b>Results:</b> Compared to de novo (unsupervised) clustering methods, we demonstrate using multiple benchmarks that supervised clustering, which uses reference transcriptomes as a guide, is robust to batch effects. To leverage the advantages of supervised clustering, we present RCA2, a new, scalable, and broadly applicable version of our RCA algorithm. RCA2 provides a user-friendly framework for supervised clustering and downstream analysis of large scRNA-seq data sets. RCA2 can be seamlessly incorporated into existing algorithmic pipelines. It incorporates various new reference panels for human and mouse, supports generation of custom panels and uses efficient graph-based clustering and sparse data structures to ensure scalability. We demonstrate the applicability of RCA2 on SC data from human bone marrow, healthy PBMCs and PBMCs from COVID-19 patients. Importantly, RCA2 facilitates cell-type-specific QC, which we show is essential for accurate clustering of SC data from heterogeneous tissues. In the era of cohort-scale SC analysis, supervised clustering methods such as RCA2 will facilitate unified analysis of diverse SC datasets.<br />
+                        
+                            <b>Availability:</b> RCA2 is implemented in R and is available on <a href="https://github.com/prabhakarlab/RCAv2">GitHub</a>.
+                        </p>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
@@ -123,26 +178,6 @@
                     <div class="details">
                         <p>
                         Immunotherapy for metastatic colorectal cancer is effective only for mismatch repair-deficient tumors with high microsatellite instability that demonstrate immune infiltration, suggesting that tumor cells can determine their immune microenvironment. To understand this cross-talk, we analyzed the transcriptome of 91,103 unsorted single cells from 23 Korean and 6 Belgian patients. Cancer cells displayed transcriptional features reminiscent of normal differentiation programs, and genetic alterations that apparently fostered immunosuppressive microenvironments directed by regulatory T cells, myofibroblasts and myeloid cells. Intercellular network reconstruction supported the association between cancer cell signatures and specific stromal or immune cell populations. Our collective view of the cellular landscape and intercellular interactions in colorectal cancer provide mechanistic information for the design of efficient immuno-oncology treatment strategies.
-                        </p>
-                    </div><!--//details-->
-                </div><!--//item-->
-                
-                <div class="item">
-                    <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title" style="width: 80%"><a href="https://www.biorxiv.org/content/10.1101/2020.04.22.056473v1", target="_blank">scConsensus: An approach combining semi-supervised and unsupervised clustering for cell type annotation in single-cell RNA-seq data </a></h3>
-                            <div class="authors">Bobby Ranjan, Florian Schmidt, Wenjie Sun, Jinyu Park, Mohammad Amin Honardoost, Joanna Tan, Nirmala Arul Rayan and Shyam Prabhakar</div>
-                            <div class="time">April 2020</div>
-                        </div><!--//upper-row-->
-                        <div class="company">bioRXiv (Single Cell Analyses Meeting, Cold Spring Harbor Laboratory)</div>
-                    </div><!--//meta-->
-                    <div class="details">
-                        <p>
-                            <b>Background:</b> Clustering is a crucial step in the analysis of single-cell data. Clusters identified in an unsupervised manner are typically annotated to cell types based on differentially expressed genes. In contrast, supervised methods use a reference panel of labelled transcriptomes to guide both clustering and cell type identification. Supervised and unsupervised clustering approaches have their distinct advantages and limitations. Therefore, they can lead to different but often complementary clustering results. Hence, a consensus approach leveraging the merits of both clustering paradigms could result in a more accurate clustering and a more precise cell type annotation. <br />
-                        
-                            <b>Results:</b> We present scConsensus, an R framework for generating a consensus clustering by (i) integrating the results from both unsupervised and supervised approaches and (ii) refining the consensus clusters using differentially expressed (DE) genes. The value of our approach is demonstrated on several existing single-cell RNA sequencing datasets, including data from sorted PBMC sub-populations.<br />
-                        
-                            <b>Conclusions:</b> scConsensus combines the merits of unsupervised and supervised approaches to partition cells with better cluster separation and homogeneity, thereby increasing our confidence in detecting distinct cell types. scConsensus is freely available on <a href="https://github.com/prabhakarlab/scConsensus">GitHub</a>.
                         </p>
                     </div><!--//details-->
                 </div><!--//item-->
@@ -183,7 +218,7 @@
             </section>
             
             <section class="section experiences-section">
-                <h2 class="section-title"><i class="fa fa-briefcase"></i>Experience</h2>
+                <h2 class="section-title"><i class="fa fa-industry"></i>Experience</h2>
 <!--
                 <div class="item">
                     <div class="meta">
@@ -247,14 +282,16 @@
                         </ul>  
                     </div><!--//details-->
                 </div><!--//item-->
+                
+<!--
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
                             <h3 class="job-title">Summer Intern</h3>
                             <div class="time">May - July 2016</div>
-                        </div><!--//upper-row-->
+                        </div>
                         <div class="company">Asia Risk Transfer Solutions (ARTS), Singapore</div>
-                    </div><!--//meta-->
+                    </div>
                     <div class="details">
                         <p>Asia Risk Transfer Solutions - a software and technological solutions startup that aims to help the insurance industry and governments create and manage risk transfer products, known as Insurance for the Masses, for developing communities in Asia.</p>
                         <ul>
@@ -263,29 +300,22 @@
                             <li>Enhanced server-side API of the enterprise web application</li>
                             <li>Tech stack included Java, Android and Django</li>
                         </ul>
-                    </div><!--//details-->
-                </div><!--//item-->
-            </section><!--//section-->
+                    </div>
+                </div>
+-->
+            </section>
             
             <section class="section projects-section">
-                <h2 class="section-title"><i class="fa fa-wrench"></i>Projects</h2>
+                <h2 class="section-title"><i class="fa fa-suitcase"></i>Conferences &amp; Workshops</h2>
                 <div class="intro">
                 </div><!--//intro-->
                 <div class="item">
-                    <span class="project-title"><a href="https://github.com/SuyashLakhotia/ContextNewsBot/">ContextNewsBot</a></span> - <span class="project-tagline">Context News Bot is a Chrome extension that allows you to step out of your filter bubble by providing a diverse set of news articles and objective Wikipedia entries for any tweet on your Twitter timeline.</span>
-                </div><!--//item-->
-                <div class="item">
-                    <span class="project-title"><a href="https://github.com/SuyashLakhotia/CommandPlus">CommandPlus</a></span> - <span class="project-tagline">A Chrome extension that provides hand gesture-based control of one's browser.</span>
-                </div><!--//item-->
-                <div class="item">
-                    <span class="project-title"><a href="https://github.com/bbbranjan/codebot" target="_blank">CodeBot</a></span> - <span class="project-tagline">An interactive chatbot that helps beginners learn how to code with witty replies, GIFs and human-readable errors.</span>
-                </div><!--//item-->
-                <div class="item">
-                    <span class="project-title"><a href="https://github.com/bbbranjan/WhenWeMeetAgain" target="_blank">When We Meet Again</a></span> - 
-                    <span class="project-tagline">An Android application that uses the relative distance between users, determined using the phone's Bluetooth, to trigger a reminder/push notification.</span>
-                </div><!--//item-->
-                <div class="item">
-                    <span class="project-title"><a href="https://github.com/SuyashLakhotia/WhyBills" target="_blank">WhyBills</a></span> - <span class="project-tagline">A system designed to eliminate printed bills at any point of sale by allowing retailers to encode their bill, generate a QR Code on our POS System and display this QR Code to the customer as a receipt.</span>
+                 <ul>
+                    <li>Human Cell Atlas Asia 2020 - Virtual</li>
+                     <li>Intelligent Systems in Molecular Biology 2020 - Virtual</li>
+                     <li>Cell Symposia 2019 - Singapore</li>
+                     <li>Single Cell Analyses Meeting - Cold Spring Harbor Laboratory, New York, USA</li>
+                    </ul>   
                 </div><!--//item-->
             </section><!--//section-->
 <!--            <section class="skills-section section">
