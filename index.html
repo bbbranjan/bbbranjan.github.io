@@ -83,7 +83,7 @@
             <section class="section summary-section">
                 <h2 class="section-title"><i class="fa fa-user"></i>About Me</h2>
                 <div class="summary">
-                    <p>Hi! I'm <strong> Bobby Ranjan</strong>, a bioinformatics specialist at the Genome Institute of Singapore. Born in Scotland, raised in India and working in Singapore, I'm an ambitious student-researcher in the field of computational biology.</p>
+                    <p>Hi! I'm <strong> Bobby Ranjan</strong>, an incoming predoctoral fellow at EMBL Rome. Born in Scotland, raised in India, educated in Singapore and currently working in Italy, I am an ambitious student-researcher in the field of computational biology.</p>
                     <div class="text-center" style="margin-top:30px">
                         <button type="button" class="btn btn-lg btn-default" onclick="window.location.href = 'Resume - Bobby Ranjan.pdf'"><i class="fa fa-file-pdf-o"></i> Resume</button>
                     </div>
@@ -124,6 +124,29 @@
             
             <section class="section experiences-section">
                 <h2 class="section-title"><i class="fa fa-book"></i>Selected Publications</h2>
+                
+                <div class="item">
+                    <button type="button" class="collapsible">
+                        <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title" style="width: 80%"><a href="https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkab632/6329577?login=true", target="_blank">RCA2: a scalable supervised clustering algorithm that reduces batch effects in scRNA-seq data</a></h3>
+                            <div class="authors"> Florian Schmidt*, Bobby Ranjan*, Quy Xiao Xuan Lin, Vaidehi Krishnan, Ignasius Joanito, Mohammad Amin Honardoost, Zahid Nawaz, Prasanna Nori Venkatesh, Joanna Tan, Nirmala Arul Rayan, Sin Tiong Ong, Shyam Prabhakar</div>
+                            <div class="time">July 2021</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Nucleic Acids Research</div>
+                    </div><!--//meta-->
+                    </button>
+                    <div class="details content">
+                        
+                        <h4>Abstract</h4>
+                        
+                        <p>
+                            The transcriptomic diversity of cell types in the human body can be analysed in unprecedented detail using single cell (SC) technologies. Unsupervised clustering of SC transcriptomes, which is the default technique for defining cell types, is prone to group cells by technical, rather than biological, variation. Compared to de-novo (unsupervised) clustering, we demonstrate using multiple benchmarks that supervised clustering, which uses reference transcriptomes as a guide, is robust to batch effects and data quality artifacts. Here, we present RCA2, the first algorithm to combine reference projection (batch effect robustness) with graph-based clustering (scalability). In addition, RCA2 provides a user-friendly framework incorporating multiple commonly used downstream analysis modules. RCA2 also provides new reference panels for human and mouse and supports generation of custom panels. Furthermore, RCA2 facilitates cell type-specific QC, which is essential for accurate clustering of data from heterogeneous tissues. We demonstrate the advantages of RCA2 on SC data from human bone marrow, healthy PBMCs and PBMCs from COVID-19 patients. Scalable supervised clustering methods such as RCA2 will facilitate unified analysis of cohort-scale SC datasets. <br /> <br />
+                        
+                            <b>Availability:</b> RCA2 is implemented in R and is available on <a href="https://github.com/prabhakarlab/RCAv2">GitHub</a>.
+                        </p>
+                    </div><!--//details-->
+                </div><!--//item-->
 
                 <div class="item">
                     <button type="button" class="collapsible">
@@ -158,7 +181,7 @@
                             <div class="authors">Bobby Ranjan, Wenjie Sun, Jinyu Park, Kunal Mishra, Ronald Xie, Fatemeh Alipour, Vipul Singhal, Florian Schmidt, Ignasius Joanito, Nirmala Arul Rayan, Michelle Gek Liang Lim, Shyam Prabhakar</div>
                             <div class="time">March 2021</div>
                         </div><!--//upper-row-->
-                        <div class="company">BioRxiv (In revision)</div>
+                        <div class="company">BioRxiv (Under review)</div>
                     </div><!--//meta--> </button> 
                     
                     <div class="details content">
@@ -166,31 +189,6 @@
                         <h4>Abstract</h4>
                         <p>
                             Feature selection (marker gene selection) is widely believed to improve clustering accuracy, and is thus a key component of single cell clustering pipelines. However, we found that the performance of existing feature selection methods was inconsistent across benchmark datasets, and occasionally even worse than without feature selection. Moreover, existing methods ignored information contained in gene-gene correlations. We therefore developed DUBStepR (Determining the Underlying Basis using Stepwise Regression), a feature selection algorithm that leverages gene-gene correlations with a novel measure of inhomogeneity in feature space, termed the Density Index (DI). Despite selecting a relatively small number of genes, DUBStepR substantially outperformed existing single-cell feature selection methods across diverse clustering benchmarks. In a published scRNA-seq dataset from sorted monocytes, DUBStepR sensitively detected a rare and previously invisible population of contaminating basophils. DUBStepR is scalable to over a million cells, and can be straightforwardly applied to other data types such as single-cell ATAC-seq. We propose DUBStepR as a general-purpose feature selection solution for accurately clustering single-cell data.
-                        </p>
-                    </div><!--//details-->
-                </div><!--//item-->
-                
-                <div class="item">
-                    <button type="button" class="collapsible">
-                        <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title" style="width: 80%"><a href="https://www.biorxiv.org/content/10.1101/2021.02.16.431527v1", target="_blank">Robust clustering and interpretation of scRNA-seq data using reference component analysis </a></h3>
-                            <div class="authors"> Florian Schmidt*, Bobby Ranjan*, Quy Xiao Xuan Lin, Vaidehi Krishnan, Ignasius Joanito, Mohammad Amin Honardoost, Zahid Nawaz, Prasanna Nori Venkatesh, Joanna Tan, Nirmala Arul Rayan, S.Tiong Ong, Shyam Prabhakar</div>
-                            <div class="time">February 2021</div>
-                        </div><!--//upper-row-->
-                        <div class="company">BioRxiv (In revision)</div>
-                    </div><!--//meta-->
-                    </button>
-                    <div class="details content">
-                        
-                        <h4>Abstract</h4>
-                        
-                        <p>
-                            <b>Motivation:</b> The transcriptomic diversity of the hundreds of cell types in the human body can be analysed in unprecedented detail using single cell (SC) technologies. Though clustering of cellular transcriptomes is the default technique for defining cell types and subtypes, single cell clustering can be strongly influenced by technical variation. In fact, the prevalent unsupervised clustering algorithms can cluster cells by technical, rather than biological, variation. <br />
-                        
-                            <b>Results:</b> Compared to de novo (unsupervised) clustering methods, we demonstrate using multiple benchmarks that supervised clustering, which uses reference transcriptomes as a guide, is robust to batch effects. To leverage the advantages of supervised clustering, we present RCA2, a new, scalable, and broadly applicable version of our RCA algorithm. RCA2 provides a user-friendly framework for supervised clustering and downstream analysis of large scRNA-seq data sets. RCA2 can be seamlessly incorporated into existing algorithmic pipelines. It incorporates various new reference panels for human and mouse, supports generation of custom panels and uses efficient graph-based clustering and sparse data structures to ensure scalability. We demonstrate the applicability of RCA2 on SC data from human bone marrow, healthy PBMCs and PBMCs from COVID-19 patients. Importantly, RCA2 facilitates cell-type-specific QC, which we show is essential for accurate clustering of SC data from heterogeneous tissues. In the era of cohort-scale SC analysis, supervised clustering methods such as RCA2 will facilitate unified analysis of diverse SC datasets.<br />
-                        
-                            <b>Availability:</b> RCA2 is implemented in R and is available on <a href="https://github.com/prabhakarlab/RCAv2">GitHub</a>.
                         </p>
                     </div><!--//details-->
                 </div><!--//item-->
