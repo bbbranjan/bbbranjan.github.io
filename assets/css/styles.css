@@ -421,5 +421,39 @@ p: actual-style {
     transform: scale(1);
   }
 }
+/* ======= Typewriter & Publication Filters ======= */
+.tagline-cursor {
+    animation: blink 0.7s step-end infinite;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.pub-filters {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.pub-filter {
+    padding: 4px 12px;
+    border: 1px solid #97AAC3;
+    border-radius: 3px;
+    background: transparent;
+    color: #545E6C;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.2s;
+}
+.pub-filter:hover, .pub-filter.active {
+    background: #3F4650;
+    border-color: #3F4650;
+    color: #fff;
+}
+.pub-item-hidden {
+    display: none;
+}
+
 /* Large devices (large desktops, 1200px and up) */
 /* Ex-Large devices (large desktops, 1200px and up) */
