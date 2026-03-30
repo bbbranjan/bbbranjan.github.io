@@ -45,7 +45,7 @@
             <div class="profile-container">
                 <img class="profile img-circle" src="assets/images/Me_Edited.png" alt="" style="width: 150px;height: 150px" />
                 <h1 class="name">Bobby Ranjan, PhD</h1>
-                <h3 class="tagline">Computational Biologist | EMBL</h3>
+                <h3 class="tagline" id="tagline-text"><span id="tagline-typed"></span><span class="tagline-cursor">|</span></h3>
             </div><!--//profile-container-->
             
             <div class="contact-container container-block">
@@ -113,10 +113,18 @@
             <section class="section experiences-section">
                 <h2 class="section-title"><i class="fa fa-book"></i>Selected Publications</h2>
 
-                <div class="item">
-                    
+                <div class="pub-filters">
+                    <button class="pub-filter active" data-filter="all">All</button>
+                    <button class="pub-filter" data-filter="epigenetic-inheritance">Epigenetic Inheritance</button>
+                    <button class="pub-filter" data-filter="sc-data-analysis">Single-Cell Data Analysis</button>
+                    <button class="pub-filter" data-filter="sc-methods">Single-Cell Methods Dev</button>
+                    <button class="pub-filter" data-filter="mathematical-modelling">Mathematical Modelling</button>
+                </div>
+
+                <div class="item" data-topic="epigenetic-inheritance">
+
                     <button type="button" class="collapsible"> <div class="meta">
-                        
+
                         <div class="upper-row">
                             <h3 class="job-title"><a href="https://www.embopress.org/doi/full/10.1038/s44318-025-00556-4", target="_blank">Embryonic signatures of intergenerational epigenetic inheritance across paternal environments and genetic backgrounds </a></h3>
                             <div class="authors">Mathilde Dura*, Bobby Ranjan*, Joana B Serrano, Rossella Paribeni, Violetta Paribeni, Laura Villacorta, Vladimir Benes, Olga Boruc, Ana Boskovic, and Jamie A Hackett</div>
@@ -134,10 +142,10 @@
                     </div><!--//details-->
                 </div><!--//item-->
 
-                <div class="item">
-                    
+                <div class="item" data-topic="epigenetic-inheritance">
+
                     <button type="button" class="collapsible"> <div class="meta">
-                        
+
                         <div class="upper-row">
                             <h3 class="job-title"><a href="https://www.embopress.org/doi/full/10.1038/s44318-025-00556-4", target="_blank">Paternal microbiome perturbations impact offspring fitness</a></h3>
                             <div class="authors">Ayele Argaw-Denboba, Thomas S. B. Schmidt, Monica Di Giacomo, Bobby Ranjan, Saravanan Devendran, Eleonora Mastrorilli, Catrin T. Lloyd, Danilo Pugliese, Violetta Paribeni, Juliette Dabin, Alessandra Pisaniello, Sergio Espinola, Alvaro Crevenna, Subhanita Ghosh, Neil Humphreys, Olga Boruc, Peter Sarkies, Michael Zimmermann, Peer Bork and Jamie A. Hackett</div>
@@ -155,7 +163,7 @@
                     </div><!--//details-->
                 </div><!--//item-->
                 
-                <div class="item">
+                <div class="item" data-topic="sc-data-analysis">
 
                     <button type="button" class="collapsible"> <div class="meta">
 
@@ -176,7 +184,7 @@
                     </div><!--//details-->
                 </div><!--//item-->
 
-                <div class="item">
+                <div class="item" data-topic="sc-methods">
 
                     <button type="button" class="collapsible"> <div class="meta">
 
@@ -197,7 +205,7 @@
                     </div><!--//details-->
                 </div><!--//item-->
                 
-                <div class="item">
+                <div class="item" data-topic="sc-methods">
                     <button type="button" class="collapsible">
                         <div class="meta">
                         <div class="upper-row">
@@ -220,7 +228,7 @@
                     </div><!--//details-->
                 </div><!--//item-->
 
-                <div class="item">
+                <div class="item" data-topic="sc-methods">
                     <button type="button" class="collapsible">
                         <div class="meta">
                         <div class="upper-row">
@@ -244,7 +252,7 @@
                     </div><!--//details-->
                 </div><!--//item-->
 
-                <div class="item">
+                <div class="item" data-topic="sc-data-analysis">
                     <button type="button" class="collapsible">
                         <div class="meta">
                         <div class="upper-row">
@@ -264,7 +272,7 @@
                     </div><!--//details-->
                 </div><!--//item-->
 
-                <div class="item">
+                <div class="item" data-topic="mathematical-modelling">
                     <button type="button" class="collapsible">
                         <div class="meta">
                         <div class="upper-row">
@@ -397,6 +405,48 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+// Publication topic filters
+document.querySelectorAll('.pub-filter').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.pub-filter').forEach(function(b) { b.classList.remove('active'); });
+    this.classList.add('active');
+    var filter = this.getAttribute('data-filter');
+    document.querySelectorAll('.experiences-section .item[data-topic]').forEach(function(item) {
+      var match = filter === 'all' || item.getAttribute('data-topic') === filter;
+      if (!match) {
+        // Collapse any open abstract before hiding
+        var btn = item.querySelector('.collapsible.active');
+        if (btn) {
+          btn.classList.remove('active');
+          var content = btn.nextElementSibling;
+          if (content) content.style.display = 'none';
+        }
+        item.classList.add('pub-item-hidden');
+      } else {
+        item.classList.remove('pub-item-hidden');
+      }
+    });
+  });
+});
+
+// Typewriter effect for tagline
+(function() {
+  var text = "Computational Biologist | European Molecular Biology Laboratory";
+  var el = document.getElementById("tagline-typed");
+  var cursor = document.querySelector(".tagline-cursor");
+  var i = 0;
+  function type() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i++);
+      setTimeout(type, 60);
+    } else {
+      cursor.style.animation = "none";
+      cursor.style.opacity = "0";
+    }
+  }
+  document.addEventListener("DOMContentLoaded", type);
+})();
 </script>
     
 </body>
